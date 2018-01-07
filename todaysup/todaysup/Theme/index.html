@@ -1,0 +1,19 @@
+
+{%extends "base.html"%}
+
+{%block title%}Welcome| knowshiksha{%endblock%} 
+{%block links%}
+
+{%for key,value in list%}
+	{%ifequal key 'Home'%}
+		<li class="selected">
+			<a href="{{value}}">{{key}}</a>
+		</li>
+	{%else%}
+		<li><a href="{{value}}">{{key}}</a></li>
+	
+	{%endifequal%}
+	
+{%endfor%}
+
+{%endblock%}
